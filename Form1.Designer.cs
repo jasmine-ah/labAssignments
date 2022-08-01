@@ -1,16 +1,11 @@
-﻿namespace July5WindowsFormsApp
+﻿namespace labEx2
 {
     partial class Form1
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
+      
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+       
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -29,194 +24,306 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.lblNum = new System.Windows.Forms.Label();
-            this.lbldate = new System.Windows.Forms.Label();
-            this.lblinvnum = new System.Windows.Forms.Label();
-            this.tbNum = new System.Windows.Forms.TextBox();
-            this.tbInvNum = new System.Windows.Forms.TextBox();
+            this.lbl_number = new System.Windows.Forms.Label();
+            this.lbl_date = new System.Windows.Forms.Label();
+            this.txt_number = new System.Windows.Forms.TextBox();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.lbl_in = new System.Windows.Forms.Label();
+            this.txt_in = new System.Windows.Forms.TextBox();
+            this.txt_cnt = new System.Windows.Forms.TextBox();
+            this.txt_pr = new System.Windows.Forms.TextBox();
+            this.txt_on = new System.Windows.Forms.TextBox();
+            this.lbl_obj = new System.Windows.Forms.Label();
+            this.lbl_co = new System.Windows.Forms.Label();
+            this.lbl_pr = new System.Windows.Forms.Label();
+            this.btn_can = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.lblObjName = new System.Windows.Forms.Label();
-            this.tbObjName = new System.Windows.Forms.TextBox();
-            this.tbCount = new System.Windows.Forms.TextBox();
-            this.tbPrice = new System.Windows.Forms.TextBox();
-            this.lblCount = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.DGV = new System.Windows.Forms.DataGridView();
-            this.errorPro1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorPro1)).BeginInit();
+            this.dgvAdd = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.isAvailable = new System.Windows.Forms.CheckBox();
+            this.chk_list = new System.Windows.Forms.CheckedListBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblNum
+            // lbl_number
             // 
-            this.lblNum.AutoSize = true;
-            this.lblNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNum.Location = new System.Drawing.Point(115, 33);
-            this.lblNum.Name = "lblNum";
-            this.lblNum.Size = new System.Drawing.Size(73, 22);
-            this.lblNum.TabIndex = 0;
-            this.lblNum.Text = "Number";
+            this.lbl_number.AutoSize = true;
+            this.lbl_number.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_number.Location = new System.Drawing.Point(74, 9);
+            this.lbl_number.Name = "lbl_number";
+            this.lbl_number.Size = new System.Drawing.Size(103, 30);
+            this.lbl_number.TabIndex = 0;
+            this.lbl_number.Text = "Number";
             // 
-            // lbldate
+            // lbl_date
             // 
-            this.lbldate.AutoSize = true;
-            this.lbldate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldate.Location = new System.Drawing.Point(241, 33);
-            this.lbldate.Name = "lbldate";
-            this.lbldate.Size = new System.Drawing.Size(48, 22);
-            this.lbldate.TabIndex = 1;
-            this.lbldate.Text = "Date";
+            this.lbl_date.AutoSize = true;
+            this.lbl_date.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_date.Location = new System.Drawing.Point(234, 9);
+            this.lbl_date.Name = "lbl_date";
+            this.lbl_date.Size = new System.Drawing.Size(66, 30);
+            this.lbl_date.TabIndex = 1;
+            this.lbl_date.Text = "Date";
             // 
-            // lblinvnum
+            // txt_number
             // 
-            this.lblinvnum.AutoSize = true;
-            this.lblinvnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblinvnum.Location = new System.Drawing.Point(594, 33);
-            this.lblinvnum.Name = "lblinvnum";
-            this.lblinvnum.Size = new System.Drawing.Size(151, 22);
-            this.lblinvnum.TabIndex = 2;
-            this.lblinvnum.Text = "Inventory Number";
+            this.txt_number.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_number.Location = new System.Drawing.Point(77, 55);
+            this.txt_number.Name = "txt_number";
+            this.txt_number.Size = new System.Drawing.Size(100, 22);
+            this.txt_number.TabIndex = 2;
             // 
-            // tbNum
+            // btn_add
             // 
-            this.tbNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNum.Location = new System.Drawing.Point(118, 71);
-            this.tbNum.Name = "tbNum";
-            this.tbNum.Size = new System.Drawing.Size(100, 28);
-            this.tbNum.TabIndex = 3;
+            this.btn_add.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Location = new System.Drawing.Point(79, 279);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(193, 47);
+            this.btn_add.TabIndex = 4;
+            this.btn_add.Text = "Add";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // tbInvNum
+            // lbl_in
             // 
-            this.tbInvNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbInvNum.Location = new System.Drawing.Point(597, 71);
-            this.tbInvNum.Name = "tbInvNum";
-            this.tbInvNum.Size = new System.Drawing.Size(163, 28);
-            this.tbInvNum.TabIndex = 4;
+            this.lbl_in.AutoSize = true;
+            this.lbl_in.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_in.Location = new System.Drawing.Point(540, 9);
+            this.lbl_in.Name = "lbl_in";
+            this.lbl_in.Size = new System.Drawing.Size(217, 30);
+            this.lbl_in.TabIndex = 5;
+            this.lbl_in.Text = "Inventory number";
+            // 
+            // txt_in
+            // 
+            this.txt_in.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_in.Location = new System.Drawing.Point(545, 55);
+            this.txt_in.Name = "txt_in";
+            this.txt_in.Size = new System.Drawing.Size(214, 22);
+            this.txt_in.TabIndex = 6;
+            // 
+            // txt_cnt
+            // 
+            this.txt_cnt.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_cnt.Location = new System.Drawing.Point(79, 219);
+            this.txt_cnt.Name = "txt_cnt";
+            this.txt_cnt.Size = new System.Drawing.Size(178, 22);
+            this.txt_cnt.TabIndex = 7;
+            // 
+            // txt_pr
+            // 
+            this.txt_pr.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_pr.Location = new System.Drawing.Point(545, 219);
+            this.txt_pr.Name = "txt_pr";
+            this.txt_pr.Size = new System.Drawing.Size(122, 22);
+            this.txt_pr.TabIndex = 8;
+            this.txt_pr.Text = "0.0";
+            // 
+            // txt_on
+            // 
+            this.txt_on.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_on.Location = new System.Drawing.Point(77, 134);
+            this.txt_on.Name = "txt_on";
+            this.txt_on.Size = new System.Drawing.Size(639, 22);
+            this.txt_on.TabIndex = 9;
+            // 
+            // lbl_obj
+            // 
+            this.lbl_obj.AutoSize = true;
+            this.lbl_obj.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_obj.Location = new System.Drawing.Point(74, 91);
+            this.lbl_obj.Name = "lbl_obj";
+            this.lbl_obj.Size = new System.Drawing.Size(151, 30);
+            this.lbl_obj.TabIndex = 10;
+            this.lbl_obj.Text = "Object name";
+            // 
+            // lbl_co
+            // 
+            this.lbl_co.AutoSize = true;
+            this.lbl_co.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_co.Location = new System.Drawing.Point(74, 174);
+            this.lbl_co.Name = "lbl_co";
+            this.lbl_co.Size = new System.Drawing.Size(80, 30);
+            this.lbl_co.TabIndex = 11;
+            this.lbl_co.Text = "Count";
+            // 
+            // lbl_pr
+            // 
+            this.lbl_pr.AutoSize = true;
+            this.lbl_pr.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pr.Location = new System.Drawing.Point(540, 174);
+            this.lbl_pr.Name = "lbl_pr";
+            this.lbl_pr.Size = new System.Drawing.Size(73, 30);
+            this.lbl_pr.TabIndex = 12;
+            this.lbl_pr.Text = "Price";
+            // 
+            // btn_can
+            // 
+            this.btn_can.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_can.Location = new System.Drawing.Point(627, 290);
+            this.btn_can.Name = "btn_can";
+            this.btn_can.Size = new System.Drawing.Size(130, 47);
+            this.btn_can.TabIndex = 13;
+            this.btn_can.Text = "Cancel";
+            this.btn_can.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(246, 69);
+            this.dateTimePicker1.Location = new System.Drawing.Point(239, 53);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(324, 28);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 14;
             // 
-            // lblObjName
+            // dgvAdd
             // 
-            this.lblObjName.AutoSize = true;
-            this.lblObjName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObjName.Location = new System.Drawing.Point(118, 145);
-            this.lblObjName.Name = "lblObjName";
-            this.lblObjName.Size = new System.Drawing.Size(114, 22);
-            this.lblObjName.TabIndex = 6;
-            this.lblObjName.Text = "Object Name";
+            this.dgvAdd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAdd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAdd.Location = new System.Drawing.Point(0, 380);
+            this.dgvAdd.Name = "dgvAdd";
+            this.dgvAdd.RowHeadersWidth = 51;
+            this.dgvAdd.RowTemplate.Height = 24;
+            this.dgvAdd.Size = new System.Drawing.Size(1261, 176);
+            this.dgvAdd.TabIndex = 15;
+            this.dgvAdd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdd_CellContentClick);
             // 
-            // tbObjName
+            // errorProvider1
             // 
-            this.tbObjName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbObjName.Location = new System.Drawing.Point(118, 183);
-            this.tbObjName.Name = "tbObjName";
-            this.tbObjName.Size = new System.Drawing.Size(642, 28);
-            this.tbObjName.TabIndex = 7;
+            this.errorProvider1.ContainerControl = this;
             // 
-            // tbCount
+            // isAvailable
             // 
-            this.tbCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCount.Location = new System.Drawing.Point(118, 287);
-            this.tbCount.Name = "tbCount";
-            this.tbCount.Size = new System.Drawing.Size(100, 28);
-            this.tbCount.TabIndex = 8;
+            this.isAvailable.AutoSize = true;
+            this.isAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.isAvailable.Location = new System.Drawing.Point(751, 134);
+            this.isAvailable.Name = "isAvailable";
+            this.isAvailable.Size = new System.Drawing.Size(106, 24);
+            this.isAvailable.TabIndex = 16;
+            this.isAvailable.Text = "Availablity";
+            this.isAvailable.UseVisualStyleBackColor = true;
+            this.isAvailable.CheckedChanged += new System.EventHandler(this.isAvailable_CheckedChanged);
             // 
-            // tbPrice
+            // chk_list
             // 
-            this.tbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPrice.Location = new System.Drawing.Point(319, 287);
-            this.tbPrice.Name = "tbPrice";
-            this.tbPrice.Size = new System.Drawing.Size(100, 28);
-            this.tbPrice.TabIndex = 9;
+            this.chk_list.FormattingEnabled = true;
+            this.chk_list.Items.AddRange(new object[] {
+            "Availability",
+            "a",
+            "b",
+            "c"});
+            this.chk_list.Location = new System.Drawing.Point(989, 53);
+            this.chk_list.Name = "chk_list";
+            this.chk_list.Size = new System.Drawing.Size(120, 89);
+            this.chk_list.TabIndex = 17;
+            this.chk_list.SelectedIndexChanged += new System.EventHandler(this.chk_list_SelectedIndexChanged);
             // 
-            // lblCount
+            // radioButton1
             // 
-            this.lblCount.AutoSize = true;
-            this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCount.Location = new System.Drawing.Point(121, 251);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(58, 22);
-            this.lblCount.TabIndex = 10;
-            this.lblCount.Text = "Count";
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(18, 21);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(68, 20);
+            this.radioButton1.TabIndex = 18;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "simple";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // lblPrice
+            // radioButton2
             // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(319, 250);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(51, 22);
-            this.lblPrice.TabIndex = 11;
-            this.lblPrice.Text = "Price";
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(6, 34);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(77, 20);
+            this.radioButton2.TabIndex = 19;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "variable";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // btnAdd
+            // label1
             // 
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(508, 272);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(93, 43);
-            this.btnAdd.TabIndex = 12;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(922, 174);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 29);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Product type";
             // 
-            // btnCancel
+            // groupBox1
             // 
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(655, 272);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(105, 43);
-            this.btnCancel.TabIndex = 13;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Location = new System.Drawing.Point(1029, 219);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "gbx1";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // DGV
+            // groupBox2
             // 
-            this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV.Location = new System.Drawing.Point(12, 385);
-            this.DGV.Name = "DGV";
-            this.DGV.RowHeadersWidth = 51;
-            this.DGV.RowTemplate.Height = 24;
-            this.DGV.Size = new System.Drawing.Size(857, 279);
-            this.DGV.TabIndex = 14;
+            this.groupBox2.Controls.Add(this.radioButton2);
+            this.groupBox2.Location = new System.Drawing.Point(787, 219);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 100);
+            this.groupBox2.TabIndex = 22;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "gbx2";
             // 
-            // errorPro1
+            // label2
             // 
-            this.errorPro1.ContainerControl = this;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(400, 256);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "label2";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 680);
-            this.Controls.Add(this.DGV);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.lblPrice);
-            this.Controls.Add(this.lblCount);
-            this.Controls.Add(this.tbPrice);
-            this.Controls.Add(this.tbCount);
-            this.Controls.Add(this.tbObjName);
-            this.Controls.Add(this.lblObjName);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1262, 556);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.chk_list);
+            this.Controls.Add(this.isAvailable);
+            this.Controls.Add(this.dgvAdd);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.tbInvNum);
-            this.Controls.Add(this.tbNum);
-            this.Controls.Add(this.lblinvnum);
-            this.Controls.Add(this.lbldate);
-            this.Controls.Add(this.lblNum);
+            this.Controls.Add(this.btn_can);
+            this.Controls.Add(this.lbl_pr);
+            this.Controls.Add(this.lbl_co);
+            this.Controls.Add(this.lbl_obj);
+            this.Controls.Add(this.txt_on);
+            this.Controls.Add(this.txt_pr);
+            this.Controls.Add(this.txt_cnt);
+            this.Controls.Add(this.txt_in);
+            this.Controls.Add(this.lbl_in);
+            this.Controls.Add(this.btn_add);
+            this.Controls.Add(this.txt_number);
+            this.Controls.Add(this.lbl_date);
+            this.Controls.Add(this.lbl_number);
             this.Name = "Form1";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorPro1)).EndInit();
+            this.Text = "Add Inventory";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,22 +331,36 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblNum;
-        private System.Windows.Forms.Label lbldate;
-        private System.Windows.Forms.Label lblinvnum;
-        private System.Windows.Forms.TextBox tbNum;
-        private System.Windows.Forms.TextBox tbInvNum;
+        private System.Windows.Forms.Label lbl_number;
+        private System.Windows.Forms.Label lbl_date;
+        private System.Windows.Forms.TextBox txt_number;
+        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.Label lbl_in;
+        private System.Windows.Forms.TextBox txt_in;
+        private System.Windows.Forms.TextBox txt_cnt;
+        private System.Windows.Forms.TextBox txt_pr;
+        private System.Windows.Forms.TextBox txt_on;
+        private System.Windows.Forms.Label lbl_obj;
+        private System.Windows.Forms.Label lbl_co;
+        private System.Windows.Forms.Label lbl_pr;
+        private System.Windows.Forms.Button btn_can;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label lblObjName;
-        private System.Windows.Forms.TextBox tbObjName;
-        private System.Windows.Forms.TextBox tbCount;
-        private System.Windows.Forms.TextBox tbPrice;
-        private System.Windows.Forms.Label lblCount;
-        private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.DataGridView DGV;
-        private System.Windows.Forms.ErrorProvider errorPro1;
+        private System.Windows.Forms.DataGridView dgvAdd;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.CheckBox isAvailable;
+        private System.Windows.Forms.CheckedListBox chk_list;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
+
+            
+            
+            
+            
+     
