@@ -5,24 +5,37 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace lectEx.Model
+namespace labEx2.Model
 {
-    class Project
+    internal class Class1
     {
-        static private List<Project> l = new List<Project>();
-        public int Number { get; set; }
-        public string Date { get; set; }
-        public int Inv_Num { get; set; }
-        public string Obj_name { get; set; }
-        public int Count { get; set; }
-        public double Price { get; set; }
+        public bool isAvailable { get; set; }
+        public bool radiobutton1 { get; set; }
+        static private List<Class1> class1 = new List<Class1>();
+        public string Id { get; set; }
+        public string ObjectName { get; set; }
+
+
+
+        public string inventoryNumber { get; set; }
+
+        public string price { get; set; }
+
+        public string count { get; set; }
+
         public void save()
         {
-            l.Add(this);
+            class1.Add(this);
+            MessageBox.Show("Query executed");
         }
-        static public List<Project> GetAllProducts()
+
+
+        public static List<Class1> getAllProducts()
         {
-            return l;
+            return class1;
         }
+
+    
+
     }
 }
