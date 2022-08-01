@@ -1,5 +1,4 @@
-﻿using lectEx.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,70 +7,121 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using labEx2;
 using System.Text.RegularExpressions;
 
-namespace lectEx
+namespace labEx2
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        
+
+        public Form1( string name)
         {
+          
             InitializeComponent();
+            label2.Text= name;
         }
-        private void btnAdd_Click(object sender, EventArgs e)
+
+        private void Form1_Load(object sender, EventArgs e)
         {
-            errorPro1.Clear();
-            Regex r = new Regex(@"^([^0-9]*)$");
-            if (string.IsNullOrEmpty(tbNum.Text))
+
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            string checkedItems = "";
+            foreach (var item in chk_list.CheckedItems) 
             {
-                errorPro1.SetError(tbNum, "Number is required");
+                checkedItems += item.ToString() + " ";
+                
             }
-            else if (string.IsNullOrEmpty(tbInvNum.Text))
+            MessageBox.Show(checkedItems);
+            Class1 c = new Class1
             {
-                errorPro1.SetError(tbInvNum, "Inventory Number is required");
-            }
-            else if (string.IsNullOrEmpty(tbObjName.Text))
+                Id = (txt_number.Text),
+
+                inventoryNumber = (txt_in.Text),
+                ObjectName = txt_on.Text,
+                count = (txt_cnt.Text),
+                price = (txt_pr.Text),
+                isAvailable = isAvailable.Checked,
+
+              
+         
+
+        };
+            MessageBox.Show("available");
+            Regex re = new Regex(@"^[A-Z]{1}^[a-z]$");
+
+            if (txt_on.Text.Length <= 2)
+                {
+                    MessageBox.Show("Please enter more than 2 character "); 
+                
+             
+                
+                    
+             if (string.IsNullOrEmpty(txt_on.Text))
             {
-                errorPro1.SetError(tbObjName, "Object name is required");
+                errorProvider1.SetError(txt_on, "Object name is required");
             }
-            else if (string.IsNullOrEmpty(tbCount.Text))
-            {
-                errorPro1.SetError(tbCount, "Count is required");
+
+                else
+                {
+                    MessageBox.Show("Invalid input");
+                }
             }
-            else if (string.IsNullOrEmpty(tbPrice.Text))
-            {
-                errorPro1.SetError(tbPrice, "Price is required");
-            }
-            else if (!r.IsMatch(tbObjName.Text))
-            {
-                errorPro1.SetError(tbObjName, "String should not have numbers.");
-            }
-            else
+           
+                if (string.IsNullOrEmpty(txt_number.Text))
+                {
+                    errorProvider1.SetError(txt_number, "id is required");
+                }
+                if (string.IsNullOrEmpty(txt_cnt.Text))
+                {
+                    errorProvider1.SetError(txt_cnt, "enter count");
+                }
+                else
             {
                 try
                 {
-                    Project p = new Project
-                    {
-                        Number = int.Parse(tbNum.Text),
-                        Date = dateTimePicker1.Text,
-                        Inv_Num = int.Parse(tbInvNum.Text),
-                        Obj_name = tbObjName.Text,
-                        Count = int.Parse(tbCount.Text),
-                        Price = double.Parse(tbPrice.Text)
-                    };
-                    p.save();
-                    DGV.DataSource = null;
-                    DGV.DataSource = Project.GetAllProducts();
-                }
+                      c.save();
+            dgvAdd.DataSource = null;
+            dgvAdd.DataSource = Class1.getAllProducts();
+              }
                 catch (Exception)
                 {
                     MessageBox.Show("Type mismatch");
                 };
-            }        
+            }      
+
+            
+                errorProvider1.Clear();
+              
         }
-        private void btnCancel_Click(object sender, EventArgs e)
+
+        private void dgvAdd_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            System.Environment.Exit(0);
+           
+        }
+
+        private void isAvailable_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk_list_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
