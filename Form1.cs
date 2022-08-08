@@ -14,97 +14,113 @@ namespace labEx2
 {
     public partial class Form1 : Form
     {
-        
-
-        public Form1( string name)
+        public Form1()
         {
-          
+
             InitializeComponent();
-            label2.Text= name;
+            //label1.Text = name;
         }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            string checkedItems = "";
+            foreach (var item in checkedListBox1.CheckedItems)
+            {
+                checkedItems += item.ToString() + " ";
+
+            }
+            MessageBox.Show("You have a degree in:"+checkedItems);
+
+
+
+           
+
+
+            
+            
+
+            Regex r = new Regex(@"^([^0-9]*)$");
+            if (txt_ph.Text.Length == 10)
+            {
+                
+            }
+
+            else
+            {
+                errorProvider1.SetError(txt_ph, "Please enter 10 digits ");
+
+                
+            }
+                
+            
+            if (string.IsNullOrEmpty(txt_id.Text))
+            {
+                errorProvider1.SetError(txt_id, "Id is required");
+            }
+            
+            if (string.IsNullOrEmpty(txt_name.Text))
+            {
+
+                errorProvider1.SetError(txt_name, "Name is required");
+
+            }
+           else if (!r.IsMatch(txt_name.Text))
+            {
+                errorProvider1.SetError(txt_name, "Name shouldn't contain numbers");
+
+            }
+
+            else
+            {
+                try
+                {
+                    Class1 c = new Class1
+                    {
+                        Id = (txt_id.Text),
+
+                        Name = (txt_name.Text),
+                        phone = int.Parse(txt_ph.Text),
+                        Age_Above_30 = chkBox1.Checked,
+                        Male = rdb_male.Checked,
+                        Female = rdb_female.Checked,
+                       
+
+
+
+                    };
+                    c.save();
+                    dgvAdd.DataSource = null;
+                    dgvAdd.DataSource = Class1.getAllProducts();
+
+                }
+                catch(Exception)
+                {
+                    MessageBox.Show("Type mismatch");
+                };
+            }
+
+           
+
+
+        }
+    
+              private void dgvAdd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+              {
+
+              }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_add_Click(object sender, EventArgs e)
+        private void btn_cancel_Click(object sender, EventArgs e)
         {
-            string checkedItems = "";
-            foreach (var item in chk_list.CheckedItems) 
-            {
-                checkedItems += item.ToString() + " ";
-                
-            }
-            MessageBox.Show(checkedItems);
-            Class1 c = new Class1
-            {
-                Id = (txt_number.Text),
-
-                inventoryNumber = (txt_in.Text),
-                ObjectName = txt_on.Text,
-                count = (txt_cnt.Text),
-                price = (txt_pr.Text),
-                isAvailable = isAvailable.Checked,
-
-              
-         
-
-        };
-            MessageBox.Show("available");
-            Regex re = new Regex(@"^[A-Z]{1}^[a-z]$");
-
-            if (txt_on.Text.Length <= 2)
-                {
-                    MessageBox.Show("Please enter more than 2 character "); 
-                
-             
-                
-                    
-             if (string.IsNullOrEmpty(txt_on.Text))
-            {
-                errorProvider1.SetError(txt_on, "Object name is required");
-            }
-
-                else
-                {
-                    MessageBox.Show("Invalid input");
-                }
-            }
-           
-                if (string.IsNullOrEmpty(txt_number.Text))
-                {
-                    errorProvider1.SetError(txt_number, "id is required");
-                }
-                if (string.IsNullOrEmpty(txt_cnt.Text))
-                {
-                    errorProvider1.SetError(txt_cnt, "enter count");
-                }
-                else
-            {
-                try
-                {
-                      c.save();
-            dgvAdd.DataSource = null;
-            dgvAdd.DataSource = Class1.getAllProducts();
-              }
-                catch (Exception)
-                {
-                    MessageBox.Show("Type mismatch");
-                };
-            }      
-
-            
-                errorProvider1.Clear();
-              
+            System.Environment.Exit(0);
         }
-
-        private void dgvAdd_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-        }
-
-        private void isAvailable_CheckedChanged(object sender, EventArgs e)
+    }
+     private void isAvailable_CheckedChanged(object sender, EventArgs e)
         {
 
         }
@@ -124,4 +140,3 @@ namespace labEx2
 
         }
     }
-}
