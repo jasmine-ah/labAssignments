@@ -23,7 +23,7 @@ namespace labEx2.Model
             MessageBox.Show("Query executed");
         }           
 public static Class2 findOne(string name){
-            return class2.Find(c=> pname==name);
+            return class2.Find(c=> c.pname==name);
         }
 
 
