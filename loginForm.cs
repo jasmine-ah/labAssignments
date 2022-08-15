@@ -16,11 +16,7 @@ namespace labEx2{
             InitializeComponent();
         }
 
-        private void loginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             if ((textBox1.Text == "admin" || textBox1.Text == "user") && textBox2.Text == "admin")
@@ -30,13 +26,15 @@ namespace labEx2{
             else {
                 MessageBox.Show(" Incorrect!!Try Again");
                     }
-            Form1 screen=new Form1(textBox1.Text);
-            screen.Show();
-            this.Hide();
            
         }
+        private void loginForm_Load(object sender, EventArgs e)
+        {
 
-        private void label1_Click(object sender, EventArgs e)
+        }
+
+
+/*        private void label1_Click(object sender, EventArgs e)
         {
 
         }
@@ -44,6 +42,6 @@ namespace labEx2{
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
            
-        }
+        }*/
     }
 }

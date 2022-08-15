@@ -71,6 +71,9 @@ namespace labEx2
                     c.save();
                     dataGridView1.DataSource = null;
                     dataGridView1.DataSource = Class2.getAllProducts();
+                    Panel screen = new Panel();
+                    screen.Show();
+                    this.Hide();
 
                 }
                 catch (Exception)

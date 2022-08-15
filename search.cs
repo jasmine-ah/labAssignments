@@ -13,7 +13,7 @@ namespace labEx2
 {
     public partial class search : Form
     {
-        public view()
+        public search()
         {
             InitializeComponent();
         }
@@ -32,7 +32,7 @@ namespace labEx2
                 MessageBox.Show("Employee found");
                 Class1.findOne(employees.Name);
                 
-                dataGridView1.DataSource = null;
+               // dataGridView1.DataSource = null;
                 
             }
             
