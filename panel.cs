@@ -58,7 +58,14 @@ namespace labEx2
                 pc.productid = item.pid;
                 pc.amount = item.amount;
                 pc.price = item.price;
-                
+                 pc.Click += (object o, EventArgs e2) =>
+                {
+
+                    newForm2 screen = new newForm2(item.pname, item.pid, item.amount, item.price);
+                    screen.Show();
+                    this.Hide();
+                    
+                };
                 flowLayoutPanel1.Controls.Add(pc);
             }
         }

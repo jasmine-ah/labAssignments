@@ -32,14 +32,6 @@ namespace labEx2
             }
             MessageBox.Show("You have a degree in:"+checkedItems);
 
-
-
-           
-
-
-            
-            
-
             Regex r = new Regex(@"^([^0-9]*)$");
             if (txt_ph.Text.Length == 10)
             {
@@ -120,6 +112,7 @@ namespace labEx2
             System.Environment.Exit(0);
         }
     }
+    /*
      private void isAvailable_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -138,5 +131,5 @@ namespace labEx2
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
-        }
+        }*/
     }
